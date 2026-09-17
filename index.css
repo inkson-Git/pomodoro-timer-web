@@ -1,0 +1,124 @@
+:root {
+  --color-bg: #fdf6f0;
+  --color-primary: #e2574c;
+  --color-primary-dark: #c8453b;
+  --color-text: #3a2e2c;
+  --color-muted: #8a7a76;
+  --color-surface: #ffffff;
+  --color-border: #ecdfda;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+.app {
+  width: 100%;
+  max-width: 360px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(58, 46, 44, 0.08);
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--color-primary);
+}
+
+.timer {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  border: 6px solid var(--color-primary);
+}
+
+.time-display {
+  font-size: 3rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.controls .btn {
+  flex: 1;
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+.controls .btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-stop {
+  background-color: var(--color-muted) !important;
+}
+
+.btn-stop:hover {
+  opacity: 0.85;
+}
+
+.btn-reset {
+  background-color: transparent !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+}
+
+.btn-reset:hover {
+  background-color: var(--color-bg) !important;
+}
+
+.btn-settings {
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+}
+
+.btn-settings:hover {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
